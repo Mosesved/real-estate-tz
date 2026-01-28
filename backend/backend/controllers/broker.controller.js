@@ -1,9 +1,6 @@
-// Broker (Agent) controller
+// Routes index
+const brokerController = require('../controllers/broker.controller');
 
-exports.registerBroker = (req, res) => {
-  res.send('Broker registration endpoint');
-};
-
-exports.getBrokers = (req, res) => {
-  res.send('List of brokers');
-};
+// Example routes (will activate later)
+// router.post('/brokers/register', brokerController.registerBroker);
+// router.get('/brokers', brokerController.getBrokers);
