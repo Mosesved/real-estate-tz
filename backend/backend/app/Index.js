@@ -1,17 +1,9 @@
-
-const express = require("express");
-const app = express();
-
-// ==================
-// MIDDLEWARE
-// ==================
-app.use(express.json());
-
 // ==================
 // ROUTES
 // ==================
 const listingRoutes = require("../listings/listing.routes");
 const reviewRoutes = require("../reviews/review.routes");
+const authRoutes = require("../auth/auth.routes");
 
 // LISTINGS API
 app.use("/api/listings", listingRoutes);
@@ -19,14 +11,5 @@ app.use("/api/listings", listingRoutes);
 // REVIEWS (TRUST) API
 app.use("/api/reviews", reviewRoutes);
 
-// ==================
-// TEST ROUTE
-// ==================
-app.get("/", (req, res) => {
-  res.send("API is running...");
-});
-
-// ==================
-// EXPORT APP
-// ==================
-module.exports = app;
+// AUTH (LOGIN / SIGNUP) API
+app.use("/api/auth", authRoutes);
