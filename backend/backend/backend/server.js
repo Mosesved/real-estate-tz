@@ -1,4 +1,8 @@
 const app = require("./app/index");
+const connectDB = require("./config/db");
+
+// Connect Database
+connectDB();
 
 const PORT = process.env.PORT || 5000;
 
