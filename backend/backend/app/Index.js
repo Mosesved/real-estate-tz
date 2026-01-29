@@ -1,3 +1,11 @@
+const express = require("express");
+const app = express();
+
+// ==================
+// MIDDLEWARE
+// ==================
+app.use(express.json());
+
 // ==================
 // ROUTES
 // ==================
@@ -13,3 +21,15 @@ app.use("/api/reviews", reviewRoutes);
 
 // AUTH (LOGIN / SIGNUP) API
 app.use("/api/auth", authRoutes);
+
+// ==================
+// TEST ROUTE
+// ==================
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
+
+// ==================
+// EXPORT APP
+// ==================
+module.exports = app;
