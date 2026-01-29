@@ -25,3 +25,7 @@ router.put("/:id", updateListing);
 router.delete("/:id", deleteListing);
 
 module.exports = router;
+const reviewRoutes = require("../reviews/review.routes");
+
+// REVIEWS API
+app.use("/api/reviews", reviewRoutes);
