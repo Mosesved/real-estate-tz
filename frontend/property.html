@@ -1,40 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Property Details</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .property-details {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .property-details img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #2c7be5;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
 
-<nav class="navbar">
+<nav>
   <a href="index.html">Home</a>
   <a href="houses.html">Houses</a>
   <a href="plots.html">Plots</a>
   <a href="agents.html">Agents</a>
+  <a href="ads.html">Ads</a>
+  <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
 </nav>
 
-<section class="container">
-  <h2>Property Details</h2>
+<div class="property-details" id="property-details">
+  <h1 id="property-title">Loading property...</h1>
+  <img id="property-image" src="" alt="Property Image">
 
-  <div class="card" style="width:100%; max-width:700px;">
-    <img src="images/house1.jpg">
-    <div class="card-body">
-      <h3>Modern House - Mbezi</h3>
-      <p>Price: TZS 120,000,000</p>
-      <p>Bedrooms: 3</p>
-      <p>Bathrooms: 2</p>
-      <p>Location: Mbezi Beach, Dar es Salaam</p>
-      <p>Description: Beautiful modern house in a secure area.</p>
+  <p id="property-price"></p>
+  <p id="property-type"></p>
+  <p id="property-location"></p>
+  <p id="property-description"></p>
 
-      <h4>Contact Agent</h4>
-      <p>Name: John Agent</p>
-      <p>Phone: +255 7XX XXX XXX</p>
+  <hr>
 
-      <a href="contact.html" class="btn">Send Message</a>
-    </div>
-  </div>
-</section>
+  <h3>Agent Information</h3>
+  <p id="agent-name"></p>
+  <p id="agent-phone"></p>
+
+  <a href="contact.html" class="btn">Contact Agent</a>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const propertyId = params.get("id");
+
+  const properties = {
+    101: {
+      title: "Modern House - Mikocheni",
+      image: "images/house1.jpg",
+      price: "TZS 250,000,000",
+      type: "House",
+      location: "Mikocheni, Dar es Salaam",
+      description: "Beautiful modern house with 4 bedrooms, parking and security.",
+      agent: "John Agent",
+      phone: "+255 700 000 001"
+    },
+    102: {
+      title: "Plot for Sale - Kigamboni",
+      image: "images/plot1.jpg",
+      price: "TZS 80,000,000",
+      type: "Plot",
+      location: "Kigamboni, Dar es Salaam",
+      description: "Prime plot near main road, ideal for residential or commercial use.",
+      agent: "Mary Agent",
+      phone: "+255 700 000 002"
+    },
+    103: {
+      title: "Luxury Apartment - Masaki",
+      image: "images/house2.jpg",
+      price: "TZS 450,000,000",
+      type: "House",
+      location: "Masaki, Dar es Salaam",
+      description: "High-end apartment with sea view, gym and swimming pool.",
+      agent: "Peter Agent",
+      phone: "+255 700 000 003"
+    }
+  };
+
+  const property = properties[propertyId];
+
+  if (property) {
+    document.getElementById("property-title").innerText = property.title;
+    document.getElementById("property-image").src = property.image;
+    document.getElementById("property-price").innerText = "Price: " + property.price;
+    document.getElementById("property-type").innerText = "Type: " + property.type;
+    document.getElementById("property-location").innerText = "Location: " + property.location;
+    document.getElementById("property-description").innerText = property.description;
+    document.getElementById("agent-name").innerText = "Agent: " + property.agent;
+    document.getElementById("agent-phone").innerText = "Phone: " + property.phone;
+  } else {
+    document.getElementById("property-details").innerHTML = `
+      <h2>Property not found</h2>
+      <p>The property you are looking for does not exist.</p>
+      <a href="index.html" class="btn">Back to Home</a>
+    `;
+  }
+</script>
 
 </body>
 </html>
