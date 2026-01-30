@@ -1,9 +1,16 @@
 import express from "express";
-import { getAllListings } from "../controllers/listing.controller.js";
+import Listing from "../models/Listing.js";
 
 const router = express.Router();
 
-// GET all listings
-router.get("/", getAllListings);
+router.get("/", async (req, res) => {
+  const listings = await Listing.find();
+  res.json(listings);
+});
+
+router.post("/", async (req, res) => {
+  const listing = await Listing.create(req.body);
+  res.json(listing);
+});
 
 export default router;
