@@ -205,6 +205,19 @@ body {
 
 .agent-card, .property-card {
   border: 1px solid #ddd;
+  padding: 15px;  margin: 10px;
+
+}.admin-section {
+  margin: 30px;
+}
+
+.admin-card {
+  border: 1px solid #ccc;
   padding: 15px;
-  margin: 10px;
+  margin: 10px 0;
+}
+
+button.danger {
+  background: red;
+  color: white;
 }
