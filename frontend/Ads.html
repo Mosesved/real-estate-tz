@@ -1,52 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Ads Board</title>
+  <meta charset="UTF-8">
+  <title>Promote Your Property - Ads Board</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-  <h2>MyRealEstate</h2>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="houses.html">Houses</a>
-    <a href="plots.html">Plots</a>
-    <a href="ads.html">Ads</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="houses.html">Houses</a>
+  <a href="plots.html">Plots</a>
+  <a href="agents.html">Agents</a>
+  <a href="agent-dashboard.html">Dashboard</a>
+  <a href="ads.html">Ads</a>
+  <a href="contact.html">Support</a>
+</nav>
 
-<section>
-  <h1>Ads Board (Ubao wa Matangazo)</h1>
-  <p>Advertise your business, services, or property here.</p>
+<h1 style="text-align:center; margin:20px;">Promote Your Property</h1>
+<p style="text-align:center;">Boost your listing to reach more buyers</p>
 
-  <div class="listings">
+<!-- AD PACKAGES -->
+<section class="ads-packages">
 
-    <div class="card ad">
-      <h3>🏗️ Construction Services</h3>
-      <p>We build modern houses at affordable prices.</p>
-      <p>📞 +255 7xx xxx xxx</p>
-    </div>
+  <div class="ad-card">
+    <h2>Basic Boost</h2>
+    <p class="price">TZS 10,000 / 7 days</p>
+    <ul>
+      <li>Featured in search</li>
+      <li>Highlighted listing</li>
+      <li>More views</li>
+    </ul>
+    <button class="btn">Choose Basic</button>
+  </div>
 
-    <div class="card ad">
-      <h3>🧱 Bricks & Cement Supplier</h3>
-      <p>Quality building materials delivered to your site.</p>
-      <p>📞 +255 6xx xxx xxx</p>
-    </div>
+  <div class="ad-card featured">
+    <h2>Premium Boost</h2>
+    <p class="price">TZS 30,000 / 14 days</p>
+    <ul>
+      <li>Top of homepage</li>
+      <li>Featured badge</li>
+      <li>Maximum visibility</li>
+    </ul>
+    <button class="btn">Choose Premium</button>
+  </div>
 
-    <div class="card ad">
-      <h3>🚚 Moving & Transport</h3>
-      <p>Fast and safe moving services in Dar es Salaam.</p>
-      <p>📞 +255 7xx xxx xxx</p>
+  <div class="ad-card">
+    <h2>VIP Boost</h2>
+    <p class="price">TZS 70,000 / 30 days</p>
+    <ul>
+      <li>Homepage banner</li>
+      <li>Top search results</li>
+      <li>Priority support</li>
+    </ul>
+    <button class="btn">Choose VIP</button>
+  </div>
+
+</section>
+
+<!-- MY ACTIVE ADS -->
+<section class="dashboard-section">
+  <h2>My Active Promotions</h2>
+
+  <div class="property-list">
+
+    <div class="property-card">
+      <h3>Modern House - Mikocheni</h3>
+      <p><strong>Package:</strong> Premium Boost</p>
+      <p><strong>Expires:</strong> 12 Feb 2026</p>
+      <span class="badge verified">Active</span>
     </div>
 
   </div>
 </section>
 
-<footer>
-  <p>© 2026 MyRealEstate.</p>
+<!-- FOOTER -->
+<footer style="text-align:center; padding:20px;">
+  <p>&copy; 2026 Real Estate Platform. Ads System.</p>
 </footer>
 
 </body>
