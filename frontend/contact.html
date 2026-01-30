@@ -2,28 +2,29 @@
 <html>
 <head>
   <title>Contact Us</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h2>MyRealEstate</h2>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="houses.html">Houses</a>
+  <a href="plots.html">Plots</a>
+  <a href="agents.html">Agents</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-<section>
-  <h1>Contact Us</h1>
-  <p>Email: info@myrealestate.com</p>
-  <p>Phone: +255 xxx xxx xxx</p>
+<section class="container">
+  <h2>Contact Us</h2>
+
+  <form>
+    <input type="text" placeholder="Your Name" required><br><br>
+    <input type="email" placeholder="Your Email" required><br><br>
+    <input type="text" placeholder="Phone"><br><br>
+    <textarea placeholder="Your Message"></textarea><br><br>
+    <button class="btn">Send Message</button>
+  </form>
 </section>
-
-<footer>
-  <p>© 2026 MyRealEstate.</p>
-</footer>
 
 </body>
 </html>
