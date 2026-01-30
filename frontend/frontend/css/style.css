@@ -111,4 +111,33 @@ body {
   font-size: 12px;
   margin: 5px 0;
 }
+.dashboard-section {
+  padding: 20px;
+}
 
+.upload-form {
+  max-width: 600px;
+  margin: auto;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.upload-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.upload-form input,
+.upload-form select,
+.upload-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.upload-form button {
+  margin-top: 15px;
+  width: 100%;
+}
