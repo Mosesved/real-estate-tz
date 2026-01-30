@@ -1,45 +1,68 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Agents</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Verified Agents - Real Estate Platform</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<nav class="navbar">
+<!-- NAVIGATION -->
+<nav>
   <a href="index.html">Home</a>
   <a href="houses.html">Houses</a>
   <a href="plots.html">Plots</a>
   <a href="agents.html">Agents</a>
+  <a href="ads.html">Ads</a>
+  <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
 </nav>
 
-<section class="container">
-  <h2>Registered Agents</h2>
+<h1 style="text-align:center; margin:20px;">Verified Real Estate Agents</h1>
+<p style="text-align:center;">Only trusted and reviewed agents appear here.</p>
 
-  <div class="card-container">
+<!-- AGENTS LIST -->
+<section class="agents-list">
 
-    <div class="card">
-      <div class="card-body">
-        <h3>John Mwinyi</h3>
-        <p>Area: Mbezi, Kimara</p>
-        <p>Rating: ⭐⭐⭐⭐☆</p>
-        <p>Phone: +255 7XX XXX XXX</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-body">
-        <h3>Sarah Joseph</h3>
-        <p>Area: Kigamboni</p>
-        <p>Rating: ⭐⭐⭐⭐⭐</p>
-        <p>Phone: +255 7XX XXX XXX</p>
-      </div>
-    </div>
-
+  <!-- AGENT 1 -->
+  <div class="agent-card">
+    <img src="images/agent1.jpg" alt="Agent">
+    <h3>John Mushi</h3>
+    <p><strong>Location:</strong> Dar es Salaam</p>
+    <p><strong>Specialty:</strong> Houses & Apartments</p>
+    <p><strong>Trust Score:</strong> ⭐⭐⭐⭐⭐ (5.0)</p>
+    <span class="badge verified">Verified</span>
+    <a href="agent-profile.html?id=201" class="btn">View Profile</a>
   </div>
+
+  <!-- AGENT 2 -->
+  <div class="agent-card">
+    <img src="images/agent2.jpg" alt="Agent">
+    <h3>Mary Joseph</h3>
+    <p><strong>Location:</strong> Arusha</p>
+    <p><strong>Specialty:</strong> Plots & Land</p>
+    <p><strong>Trust Score:</strong> ⭐⭐⭐⭐☆ (4.5)</p>
+    <span class="badge verified">Verified</span>
+    <a href="agent-profile.html?id=202" class="btn">View Profile</a>
+  </div>
+
+  <!-- AGENT 3 -->
+  <div class="agent-card">
+    <img src="images/agent3.jpg" alt="Agent">
+    <h3>Ahmed Salum</h3>
+    <p><strong>Location:</strong> Mwanza</p>
+    <p><strong>Specialty:</strong> Commercial Properties</p>
+    <p><strong>Trust Score:</strong> ⭐⭐⭐⭐☆ (4.2)</p>
+    <span class="badge verified">Verified</span>
+    <a href="agent-profile.html?id=203" class="btn">View Profile</a>
+  </div>
+
 </section>
+
+<!-- FOOTER -->
+<footer style="text-align:center; padding:20px;">
+  <p>&copy; 2026 Real Estate Platform. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
