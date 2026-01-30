@@ -2,83 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Real Estate Platform - Home</title>
+  <title>Real Estate System</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- NAVIGATION -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="houses.html">Houses</a>
-  <a href="plots.html">Plots</a>
-  <a href="agents.html">Agents</a>
-  <a href="ads.html">Ads</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="houses.html">Houses</a>
+    <a href="plots.html">Plots</a>
+    <a href="agents.html">Agents</a>
+    <a href="ads.html">Ads</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-<!-- SEARCH BAR -->
-<section class="search-bar">
-  <input type="text" placeholder="Search location...">
-  <select>
-    <option>All Types</option>
-    <option>House</option>
-    <option>Plot</option>
-  </select>
-  <button>Search</button>
-</section>
+  <!-- HERO / HEADER -->
+  <header>
+    <h1>Find Houses & Plots in Tanzania</h1>
+    <p>Trusted agents. Real properties.</p>
+  </header>
 
-<!-- DYNAMIC PROPERTY LIST -->
-<section class="property-list" id="property-list">
-  <p>Loading properties...</p>
-</section>
+  <!-- SEARCH BAR -->
+  <section class="search-bar">
+    <input type="text" placeholder="Search location...">
+    <select>
+      <option>All Types</option>
+      <option>House</option>
+      <option>Plot</option>
+    </select>
+    <button>Search</button>
+  </section>
 
-<!-- FOOTER -->
-<footer style="text-align:center; padding:20px;">
-  <p>&copy; 2026 Real Estate Platform. All rights reserved.</p>
-</footer>
+  <!-- PROPERTY LIST -->
+  <section class="property-list" id="property-list">
+    <p>Loading properties...</p>
+  </section>
 
-<!-- DYNAMIC FETCH SCRIPT -->
-<script>
-  const propertyList = document.getElementById("property-list");
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Tanzania Real Estate Platform</p>
+  </footer>
 
-  async function loadListings() {
-    try {
-      const res = await fetch("http://localhost:5000/api/listings");
-      const listings = await res.json();
+  <!-- LOAD LISTINGS FROM BACKEND -->
+  <script>
+    async function loadListings() {
+      try {
+        const res = await fetch("http://localhost:5000/api/listings");
+        const listings = await res.json();
 
-      propertyList.innerHTML = "";
+        const container = document.getElementById("property-list");
+        container.innerHTML = "";
 
-      if (!listings.length) {
-        propertyList.innerHTML = "<p>No properties available yet.</p>";
-        return;
+        listings.forEach(l => {
+          container.innerHTML += `
+            <div class="property-card">
+              <img src="${l.image || 'images/house1.jpg'}" alt="Property">
+              <h3>${l.title}</h3>
+              <p><strong>Price:</strong> ${l.price}</p>
+              <p><strong>Type:</strong> ${l.type}</p>
+              <p><strong>Location:</strong> ${l.location}</p>
+              <a href="property.html?id=${l._id}" class="btn">View Details</a>
+            </div>
+          `;
+        });
+
+      } catch (err) {
+        console.error(err);
+        document.getElementById("property-list").innerHTML =
+          "<p>Failed to load properties.</p>";
       }
-
-      listings.forEach(listing => {
-        const card = document.createElement("div");
-        card.className = "property-card";
-
-        card.innerHTML = `
-          <img src="${listing.image || 'images/house1.jpg'}" alt="Property">
-          <h3>${listing.title}</h3>
-          <p><strong>Price:</strong> ${listing.price}</p>
-          <p><strong>Type:</strong> ${listing.type}</p>
-          <p><strong>Location:</strong> ${listing.location}</p>
-          <a href="property.html?id=${listing._id}" class="btn">View Details</a>
-        `;
-
-        propertyList.appendChild(card);
-      });
-
-    } catch (error) {
-      console.error(error);
-      propertyList.innerHTML = "<p>Failed to load properties from server.</p>";
     }
-  }
 
-  loadListings();
-</script>
+    loadListings();
+  </script>
 
 </body>
 </html>
