@@ -1,35 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>About Us</title>
+  <meta charset="UTF-8">
+  <title>About Us - Real Estate Platform</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-  <h2>MyRealEstate</h2>
-  <nav>
-  nav>
+<!-- NAVIGATION -->
+<nav>
   <a href="index.html">Home</a>
   <a href="houses.html">Houses</a>
   <a href="plots.html">Plots</a>
+  <a href="agents.html">Agents</a>
   <a href="ads.html">Ads</a>
-  <a href="about.html">About Us</a>
+  <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
 </nav>
-</header>
 
-<section>
-  <h1>About Us</h1>
-  <p>
-    MyRealEstate is a trusted real estate platform that connects buyers,
-    renters, and verified agents. Our goal is to make property searching
-    simple, transparent, and safe.
-  </p>
+<!-- ABOUT HEADER -->
+<section class="about-header">
+  <h1>About Our Platform</h1>
+  <p>Your trusted digital marketplace for houses and plots in Tanzania.</p>
 </section>
 
-<footer>
-  <p>© 2026 MyRealEstate.</p>
+<!-- ABOUT CONTENT -->
+<section class="about-content">
+
+  <h2>Who We Are</h2>
+  <p>
+    We are a modern real estate technology platform built to connect buyers,
+    sellers, and verified agents across Tanzania. Our mission is to make property
+    transactions safer, faster, and more transparent.
+  </p>
+
+  <h2>Our Mission</h2>
+  <p>
+    To reduce fraud, improve trust, and simplify the process of buying and selling
+    houses and plots by using technology and verified agent systems.
+  </p>
+
+  <h2>Why Choose Us?</h2>
+  <ul>
+    <li>Verified agents with trust scores</li>
+    <li>Transparent property listings</li>
+    <li>Client reviews and ratings</li>
+    <li>Easy property search</li>
+    <li>Secure and professional platform</li>
+  </ul>
+
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+
+  <h2>How It Works</h2>
+
+  <div class="how-step">
+    <h3>1. Search Property</h3>
+    <p>
+      Browse houses and plots by location, type, and price to find what matches
+      your needs.
+    </p>
+  </div>
+
+  <div class="how-step">
+    <h3>2. View Verified Agent</h3>
+    <p>
+      Check agent profiles, trust scores, and reviews before contacting any agent.
+    </p>
+  </div>
+
+  <div class="how-step">
+    <h3>3. Contact & Visit</h3>
+    <p>
+      Contact the agent directly and arrange for property viewing and inspection.
+    </p>
+  </div>
+
+  <div class="how-step">
+    <h3>4. Secure Deal</h3>
+    <p>
+      Complete your transaction safely with trusted agents and proper documentation.
+    </p>
+  </div>
+
+</section>
+
+<!-- FOR AGENTS -->
+<section class="for-agents">
+  <h2>For Property Agents</h2>
+  <p>
+    Agents can create profiles, upload properties, build trust through reviews,
+    and promote listings using our paid boost system.
+  </p>
+
+  <ul>
+    <li>Create agent profile</li>
+    <li>Upload unlimited properties</li>
+    <li>Build trust score</li>
+    <li>Promote listings with ads</li>
+    <li>Grow your real estate business</li>
+  </ul>
+</section>
+
+<!-- FOOTER -->
+<footer style="text-align:center; padding:20px;">
+  <p>&copy; 2026 Real Estate Platform. Building trust in real estate.</p>
 </footer>
 
 </body>
