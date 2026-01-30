@@ -1,11 +1,14 @@
-// app/app.js
+import express from "express";
+import cors from "cors";
+import listingRoutes from "./routes/listing.routes.js";
+import interactionRoutes from "./routes/interaction.routes.js";
 
-const express = require("express");
 const app = express();
 
-const routes = require("../routes");
-
+app.use(cors());
 app.use(express.json());
-app.use("/", routes);
 
-module.exports = app;
+app.use("/api/listings", listingRoutes);
+app.use("/api/interactions", interactionRoutes);
+
+export default app;
