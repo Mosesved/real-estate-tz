@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,40 +6,57 @@
 </head>
 <body>
 
+<nav>
+  <a href="index.html">Home</a>
+  <a href="admin.html">Admin Panel</a>
+</nav>
+
 <h1>Admin Dashboard</h1>
 
-<h2>Manage Agents</h2>
-<table border="1" width="100%">
-  <tr>
-    <th>Agent Name</th>
-    <th>Status</th>
-    <th>Action</th>
-  </tr>
-  <tr>
-    <td>Agent 1</td>
-    <td>Active</td>
-    <td><button>Delete</button></td>
-  </tr>
-  <tr>
-    <td>Agent 2</td>
-    <td>Fake</td>
-    <td><button>Delete</button></td>
-  </tr>
-</table>
+<!-- AGENT VERIFICATION -->
+<section class="admin-section">
+  <h2>Agent Verification</h2>
 
-<h2>Manage Properties</h2>
-<table border="1" width="100%">
-  <tr>
-    <th>Title</th>
-    <th>Agent</th>
-    <th>Action</th>
-  </tr>
-  <tr>
-    <td>House - Sinza</td>
-    <td>Agent 1</td>
-    <td><button>Delete</button></td>
-  </tr>
-</table>
+  <div class="admin-card">
+    <p>John Mwangi - Pending</p>
+    <button>Verify</button>
+    <button class="danger">Delete</button>
+  </div>
+
+  <div class="admin-card">
+    <p>Mary Joseph - Pending</p>
+    <button>Verify</button>
+    <button class="danger">Delete</button>
+  </div>
+</section>
+
+<!-- MANAGE LISTINGS -->
+<section class="admin-section">
+  <h2>Manage Listings</h2>
+
+  <div class="admin-card">
+    <p>Modern House - Mikocheni</p>
+    <button>Approve</button>
+    <button class="danger">Remove</button>
+  </div>
+
+  <div class="admin-card">
+    <p>Plot - Kigamboni</p>
+    <button>Approve</button>
+    <button class="danger">Remove</button>
+  </div>
+</section>
+
+<!-- MANAGE REVIEWS -->
+<section class="admin-section">
+  <h2>Manage Reviews</h2>
+
+  <div class="admin-card">
+    <p>"Good service" - Property #101</p>
+    <button>Approve</button>
+    <button class="danger">Delete</button>
+  </div>
+</section>
 
 </body>
 </html>
