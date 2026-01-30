@@ -2,75 +2,39 @@
 <html>
 <head>
   <title>Property Details</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h2>MyRealEstate</h2>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="houses.html">Houses</a>
-    <a href="plots.html">Plots</a>
-    <a href="agents.html">Agents</a>
-    <a href="ads.html">Ads</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="houses.html">Houses</a>
+  <a href="plots.html">Plots</a>
+  <a href="agents.html">Agents</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-<section>
-  <h1>3 Bedroom House - Dar es Salaam</h1>
+<section class="container">
+  <h2>Property Details</h2>
 
-  <!-- IMAGES -->
-  <div class="listings">
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="House Image">
+  <div class="card" style="width:100%; max-width:700px;">
+    <img src="images/house1.jpg">
+    <div class="card-body">
+      <h3>Modern House - Mbezi</h3>
+      <p>Price: TZS 120,000,000</p>
+      <p>Bedrooms: 3</p>
+      <p>Bathrooms: 2</p>
+      <p>Location: Mbezi Beach, Dar es Salaam</p>
+      <p>Description: Beautiful modern house in a secure area.</p>
+
+      <h4>Contact Agent</h4>
+      <p>Name: John Agent</p>
+      <p>Phone: +255 7XX XXX XXX</p>
+
+      <a href="contact.html" class="btn">Send Message</a>
     </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="House Image">
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="House Image">
-    </div>
   </div>
-
-  <!-- DETAILS -->
-  <div class="card">
-    <h3>Property Information</h3>
-    <p><strong>Price:</strong> TZS 120,000,000</p>
-    <p><strong>Location:</strong> Dar es Salaam</p>
-    <p><strong>Type:</strong> House</p>
-    <p><strong>Bedrooms:</strong> 3</p>
-    <p><strong>Bathrooms:</strong> 2</p>
-    <p><strong>Description:</strong> Modern house located in a secure neighborhood with parking and garden.</p>
-  </div>
-
-  <!-- AGENT INFO -->
-  <div class="card">
-    <h3>Agent Information</h3>
-    <p><strong>Name:</strong> John Mwinyi</p>
-    <p><strong>Phone:</strong> +255 7xx xxx xxx</p>
-    <p><strong>Email:</strong> john@myrealestate.com</p>
-    <a href="agent-profile.html">View Agent Profile</a>
-  </div>
-
-  <!-- CONTACT FORM -->
-  <div class="card">
-    <h3>Contact Agent</h3>
-    <form>
-      <input type="text" placeholder="Your Name" required><br><br>
-      <input type="email" placeholder="Your Email" required><br><br>
-      <textarea placeholder="Your Message" required></textarea><br><br>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-
 </section>
 
-<footer>
-  <p>© 2026 MyRealEstate.</p>
-</footer>
-
 </body>
-    </html>
+</html>
