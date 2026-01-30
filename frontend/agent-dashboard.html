@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agent Dashboard - Upload Property</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="houses.html">Houses</a>
+  <a href="plots.html">Plots</a>
+  <a href="agents.html">Agents</a>
+  <a href="agent-dashboard.html">Dashboard</a>
+  <a href="ads.html">Ads</a>
+  <a href="contact.html">Support</a>
+</nav>
+
+<h1 style="text-align:center; margin:20px;">Agent Dashboard</h1>
+<p style="text-align:center;">Upload and manage your properties</p>
+
+<!-- UPLOAD FORM -->
+<section class="dashboard-section">
+
+  <form class="upload-form">
+
+    <h2>Upload New Property</h2>
+
+    <label>Property Title</label>
+    <input type="text" placeholder="e.g. Modern House - Mikocheni" required>
+
+    <label>Property Type</label>
+    <select required>
+      <option value="">Select Type</option>
+      <option>House</option>
+      <option>Plot</option>
+      <option>Apartment</option>
+      <option>Commercial</option>
+    </select>
+
+    <label>Price (TZS)</label>
+    <input type="number" placeholder="e.g. 250000000" required>
+
+    <label>Location</label>
+    <input type="text" placeholder="e.g. Mikocheni, Dar es Salaam" required>
+
+    <label>Description</label>
+    <textarea placeholder="Describe the property..." rows="4" required></textarea>
+
+    <label>Upload Images</label>
+    <input type="file" multiple>
+
+    <button type="submit" class="btn">Upload Property</button>
+
+  </form>
+
+</section>
+
+<!-- MY LISTINGS (PREVIEW UI) -->
+<section class="dashboard-section">
+  <h2>My Uploaded Properties</h2>
+
+  <div class="property-list">
+
+    <div class="property-card">
+      <img src="images/house1.jpg" alt="House">
+      <h3>Modern House - Mikocheni</h3>
+      <p><strong>Status:</strong> Pending Approval</p>
+      <p><strong>Price:</strong> TZS 250,000,000</p>
+      <button class="btn">Edit</button>
+      <button class="btn">Delete</button>
+    </div>
+
+    <div class="property-card">
+      <img src="images/plot1.jpg" alt="Plot">
+      <h3>Plot for Sale - Kigamboni</h3>
+      <p><strong>Status:</strong> Approved</p>
+      <p><strong>Price:</strong> TZS 80,000,000</p>
+      <button class="btn">Edit</button>
+      <button class="btn">Delete</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="text-align:center; padding:20px;">
+  <p>&copy; 2026 Real Estate Platform. Agent Dashboard.</p>
+</footer>
+
+</body>
+</html>
