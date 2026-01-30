@@ -186,3 +186,25 @@ body {
   margin: 15px 0;
   background: #fafafa;
 }
+.auth-form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.auth-form input,
+.auth-form select,
+.auth-form textarea,
+.auth-form button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.verified { color: green; }
+.pending { color: orange; }
+
+.agent-card, .property-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+}
