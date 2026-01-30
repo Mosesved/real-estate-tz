@@ -1,7 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Real Estate Platform - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="houses.html">Houses</a>
+  <a href="plots.html">Plots</a>
+  <a href="agents.html">Agents</a>
+  <a href="ads.html">Ads</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- SEARCH BAR -->
+<section class="search-bar">
+  <input type="text" placeholder="Search location...">
+  <select>
+    <option>All Types</option>
+    <option>House</option>
+    <option>Plot</option>
+  </select>
+  <button>Search</button>
+</section>
+
+<!-- DYNAMIC PROPERTY LIST -->
 <section class="property-list" id="property-list">
   <p>Loading properties...</p>
 </section>
 
+<!-- FOOTER -->
+<footer style="text-align:center; padding:20px;">
+  <p>&copy; 2026 Real Estate Platform. All rights reserved.</p>
+</footer>
+
+<!-- DYNAMIC FETCH SCRIPT -->
 <script>
   const propertyList = document.getElementById("property-list");
 
@@ -11,6 +49,11 @@
       const listings = await res.json();
 
       propertyList.innerHTML = "";
+
+      if (!listings.length) {
+        propertyList.innerHTML = "<p>No properties available yet.</p>";
+        return;
+      }
 
       listings.forEach(listing => {
         const card = document.createElement("div");
@@ -30,9 +73,12 @@
 
     } catch (error) {
       console.error(error);
-      propertyList.innerHTML = "<p>Failed to load properties.</p>";
+      propertyList.innerHTML = "<p>Failed to load properties from server.</p>";
     }
   }
 
   loadListings();
 </script>
+
+</body>
+</html>
