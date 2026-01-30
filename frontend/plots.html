@@ -2,67 +2,45 @@
 <html>
 <head>
   <title>Plots</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h2>MyRealEstate</h2>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="houses.html">Houses</a>
-    <a href="plots.html">Plots</a>
-    <a href="agents.html">Agents</a>
-    <a href="ads.html">Ads</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="houses.html">Houses</a>
+  <a href="plots.html">Plots</a>
+  <a href="agents.html">Agents</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-<section>
-  <h1>Plots for Sale</h1>
+<section class="container">
+  <h2>Available Plots</h2>
 
-  <div class="listings">
+  <div class="card-container">
 
-    <!-- PLOT 1 -->
     <div class="card">
-      <h3>Plot - Kigamboni</h3>
-      <p><strong>Location:</strong> Kigamboni</p>
-      <p><strong>Price:</strong> TZS 35,000,000</p>
-      <p><strong>Type:</strong> Plot</p>
-      <p><strong>Size:</strong> 600 sqm</p>
-
-      <a href="property.html">View Details</a>
+      <img src="images/plot1.jpg">
+      <div class="card-body">
+        <h3>Plot - Kigamboni</h3>
+        <p>Size: 800 sqm</p>
+        <p>Price: TZS 45,000,000</p>
+        <a href="property.html" class="btn">View Details</a>
+      </div>
     </div>
 
-    <!-- PLOT 2 -->
     <div class="card">
-      <h3>Plot - Mbagala</h3>
-      <p><strong>Location:</strong> Mbagala</p>
-      <p><strong>Price:</strong> TZS 22,000,000</p>
-      <p><strong>Type:</strong> Plot</p>
-      <p><strong>Size:</strong> 450 sqm</p>
-
-      <a href="property.html">View Details</a>
-    </div>
-
-    <!-- PLOT 3 -->
-    <div class="card">
-      <h3>Plot - Tegeta</h3>
-      <p><strong>Location:</strong> Tegeta</p>
-      <p><strong>Price:</strong> TZS 60,000,000</p>
-      <p><strong>Type:</strong> Plot</p>
-      <p><strong>Size:</strong> 800 sqm</p>
-
-      <a href="property.html">View Details</a>
+      <img src="images/plot2.jpg">
+      <div class="card-body">
+        <h3>Plot - Bunju</h3>
+        <p>Size: 1000 sqm</p>
+        <p>Price: TZS 60,000,000</p>
+        <a href="property.html" class="btn">View Details</a>
+      </div>
     </div>
 
   </div>
 </section>
-
-<footer>
-  <p>© 2026 MyRealEstate.</p>
-</footer>
 
 </body>
 </html>
